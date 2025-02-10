@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theara & Chhing's Valentine's Day</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #ff66b2; /* Pink text */
+        }
+        h1 {
+            font-size: 3rem;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .page {
+            display: none;
+            padding: 20px;
+        }
+        .button {
+            background-color: #ff66b2; /* Pink button */
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 15px;
+            transition: all 0.3s;
+        }
+        .button:hover {
+            background-color: #ff3399;
+            transform: scale(1.05);
+        }
+        .heart {
+            font-size: 80px;
+            animation: bounce 1s infinite;
+            color: #ff66b2;
+        }
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            z-index: -1;
+            display: none;
+        }
+        .confetti span {
+            display: inline-block;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #ff66b2;
+            border-radius: 50%;
+            opacity: 0;
+            animation: confetti 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes confetti {
+            0% { transform: translateY(0) translateX(0); opacity: 1; }
+            100% { transform: translateY(1000px) translateX(200px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Page 1: The Heart-Pounding Question -->
+    <div id="page1" class="page">
+        <h1>បងសួរ១មើស😍</h1>
+        <p> Will you be my Valentine? 😘</p>
+        <p>បងគិតតាំងពីបងជួបអូនឯងលើកដំបូងហរ ❤️</p>
+        <button class="button" onclick="goToPage(2)">ចាស បាន 💖</button>
+    </div>
+
+    <!-- Page 2: ដឹងនៅ -->
+    <div id="page2" class="page">
+        <h1>វ៉ាវអូនឯងថាចាស😍🎉</h1>
+        <p>ធារ៉ា សប្បាយចិត្តដល់ហើយXD! ១៤ កុម្ភៈជួបគ្នា 💖</p>
+        <div class="heart">💖</div>
+        <div class="confetti" id="confetti"></div>
+        <button class="button" onclick="goToPage(3)">ម៉េចទៀត 🎉</button>
+    </div>
+
+    <!-- Page 3: បងមានកាដូរឱ្យ -->
+    <div id="page3" class="page">
+        <h1>កាដូរ Valentine ហាស🎁</h1>
+        <p>បងមានកាដូរ១ពេលយើងបានជួបគ្នានៅភ្នំពេញ កាដូរពិសេសហ្មងXD ឡូវយកត្រឹមលុយចាយសិនបានហើយអូន 🍫</p>
+        <button class="button" onclick="goToPage(4)">Aww, Thank You! o~o💕</button>
+    </div>
+
+    <!-- Page 4: ម៉េចដែរ -->
+    <div id="page4" class="page">
+        <h1>ចង់រ៉ូមែនទិចអត់? 💖</h1>
+        <p>រាល់ពេលដែលយើងនៅឆ្ងាយពីគ្នា ធារ៉ាអត់អាចឈប់គិតពីអូនបានទេ។ អូនឯងមានន័យសម្រាប់បង, កូនពៅឈីង😍! </p>
+        <div class="heart">💞</div>
+        <p>យើងនៅឆ្ងាយមែនតែយើងនៅsweetដដែលហហាហាហា... 😍</p>
+        <button class="button" onclick="goToPage(5)">ម៉េចទៀតបង 😘</button>
+    </div>
+
+    <!-- Page 5: សារភាព -->
+    <div id="page5" class="page">
+        <h1>ចង់សារភាព១! 💌</h1>
+        <p>បងស្រឡាញ់អូនឯង ខ្វះអត់បានXD ពេលមើលមុខអូនឯងទៅធ្វើឱ្យបងមានអារម្មណ៍ bas bas.... 💓</p>
+        <p>យើងបានបង្កើត memories ជាមួយគ្នាច្រើនហាសបងចាំទាំងអស់ហ្នឹងអត់ភ្លេចទេ😊</p>
+        <button class="button" onclick="goToPage(6)">អូនស្លាញ់បង!😍 💘</button>
+    </div>
+
+    <!-- Page 6: ចុង -->
+    <div id="page6" class="page">
+        <h1>វ៉ាវអូនឯងអានឡើងចប់ 💃🕺</h1>
+        <p>តស់រាំ១hahahaha</p>
+        <div class="heart">💃❤️🕺</div>
+        <p>ពេលជួបគ្នាចង់ឱបគ្នាអត់បេប 😘</p>
+        <button class="button" onclick="goToPage(7)">តស់រាំ!!! 🕺💃</button>
+    </div>
+
+    <!-- Page 7: ម៉េចទៀតវុី -->
+    <div id="page7" class="page">
+        <h1>BOOM! 💥</h1>
+        <p> 🌟 Theara  love Chhing forever! 💥</p>
+        <div class="heart">🔥💖🔥</div>
+        <p>នៅជាមួយរហូតណាពៅមាស🤤😘</p>
+        <button class="button" onclick="goToPage(8)">ok សំណួរ១ចុងក្រោយ 😘</button>
+    </div>
+
+    <!-- Page 8: Juii Knea Ot Babe? -->
+    <div id="page8" class="page">
+        <h1>Juii knea ot babe? 😘😍</h1>
+        <p>បងអ្នកចេញលុយបន្ទប់ឱ្យ 😘</p>
+        <button class="button" onclick="goToPage(9)">ចាស បងធារ៉ា 😍</button>
+    </div>
+
+    <!-- Page 9: LESSGOOOOO! -->
+    <div id="page9" class="page">
+        <h1>ចាំកាល! 😏</h1>
+        <div style="font-size: 150px;">😏</div>
+        <p>ស្លាញ់អូនឯងម៉េះ 😍🤤💖</p>
+    </div>
+
+    <script>
+        // Page transition function
+        function goToPage(pageNumber) {
+            hideAllPages();
+            document.getElementById('page' + pageNumber).style.display = 'block';
+            if (pageNumber === 2) {
+                launchConfetti();
+            }
+        }
+
+        // Hide all pages function
+        function hideAllPages() {
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.style.display = 'none';
+            });
+        }
+
+        // Confetti function for celebration
+        function launchConfetti() {
+            const confettiContainer = document.getElementById('confetti');
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('span');
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.animationDelay = `${Math.random() * 2}s`;
+                confettiContainer.appendChild(confetti);
+            }
+            confettiContainer.style.display = 'block';
+        }
+
+        // Initialize the first page
+        window.onload = function() {
+            goToPage(1);
+        };
+    </script>
+
+</body>
+</html>
